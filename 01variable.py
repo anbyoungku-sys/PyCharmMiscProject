@@ -55,3 +55,6 @@ print(type(user_id),type(password), type(name), type(age), type(email), type(is_
 # 문자 - 글자, 단어, 문장 같은 텍스트 데이터를 의미
 # 불 - 참/거짓으로 표현 가능한 값
 
+
+
+

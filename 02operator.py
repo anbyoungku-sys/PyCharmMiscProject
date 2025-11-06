@@ -74,3 +74,63 @@ result = '짝수' \
     if (num % 2 == 0) \
     else '홀수'
 print( num, '은', result)
+
+
+# 파이썬 표준 출력
+# 프로그램의 실행결과를 화면(콘솔/터미널)에 출력하는 것을 의미
+# 파이썬에서는 이것을 print()를 통해 수행
+print("Hello", "World", "!!")
+print("Hello", "World", "!!", sep = ',')
+print("Hello", "World", "!!", sep = '-')
+
+print('1') # print함수의 종결문자는 \n (줄바꿈)
+print('2')
+print('3')
+print('4')
+print('5')
+
+
+print('1', end = '') # end가 한줄로 출력하게 만들어줌.
+print('2', end = '')
+print('3', end = '')
+print('4', end = '')
+print('5')
+
+print("*objects, sep = ' ', end = '-', file = sys.stdout, flush = False ")
+
+# 긴 텍스트를 여러줄로 나눠 작성하고 싶을때 '\'를 사용
+print("*objects, sep = ' ', end = '-', \
+file = sys.stdout, flush = False ")
+
+# 문자열 입력 받기
+# input(입력시 표시할 메시지)
+
+#name = input('이름을 입력하세요: ')
+#print(name)
+
+
+# ex) 두수를 입력 받아 사칙연산 후 결과 출력
+# input를 통해 입력 받은 내용은 기본적으로 문자열
+# 입력한 내용을 숫자로 바꾸려면 형변환 함수 필요!
+# 형변환 : 데이터의 자료형을 다른 형식으로 바꾸는 것
+# 암시적 형변환(프로모션) : 파이썬이 자도으로 변환해 줌
+# 명시적 형변환 : 프로그래머가 직접 변환
+# int(대상), flort(대상), str(대상)
+# x = input('aa에 숫자를 넣어주세요: ')
+# y = input('bb에 숫자를 넣어주세요: ')
+
+x = int(input('x에 숫자를 넣어주세요: '))
+x = int(input('y에 숫자를 넣어주세요: '))
+print(x + y, x - y, x * y, x / y,)
+
+
+
+
+
+
+
+
+
+
+
+
