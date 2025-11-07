@@ -341,7 +341,7 @@ print(result)
 # '점수를 잘못 입력하셨습니다.' 라고 출력하고 종료
 # 학점 처리 부분을 match/case로 작성
 #
-jusu = int(input('점수를 입력하세요: '))
+
 #
 # if 0 <= jusu <= 100:
     # match jusu:
@@ -371,7 +371,7 @@ jusu = int(input('점수를 입력하세요: '))
 #             grade = 'D학점입니다'
 #         case _:
 #             grade = 'F학점입니다'
-
+jusu = int(input('점수를 입력하세요: '))
 
     match jusu // 10:
         case 10 | 9 : # or패턴
