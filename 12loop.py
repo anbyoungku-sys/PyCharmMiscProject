@@ -59,3 +59,19 @@ print(tot)
 
 
 
+# 무한 반복 함수 itertools, iter
+i = 1
+# 첫 번째 무한 반복 (내장 함수 iter 사용)
+for _ in iter(int, 1):
+    #if i == 9999999: break  # 주석 처리된 중단 조건
+    print(i, end=' ')
+    i += 1
+print()
+
+import itertools
+
+# 두 번째 무한 반복 (itertools.count 사용)
+for i in itertools.count():
+    if i == 9999999: break
+    print(i, end=' ')
+print()
