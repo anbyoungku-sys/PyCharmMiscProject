@@ -202,32 +202,29 @@ cardbank = '식별안됨'
 if len(cardnum) == 6:
     if cardnum[:2] == '35':
         cardtype = 'JBC카드'
-        if cardnum[2:] == '6317':             cardbank = 'NH농협카드'
-        elif cardnum[:2] == '6901':             cardbank = '신한카드'
-        elif cardnum[2:] == '6912':            cardbank = 'KB국민카드'
+        if cardnum[2:] == '6317': cardbank = 'NH농협카드'
+        elif cardnum[:2] == '6901': cardbank = '신한카드'
+        elif cardnum[2:] == '6912': cardbank = 'KB국민카드'
         else: cardbank = '은행정보는 등록되지 않았습니다.'
     elif cardnum[0] == '4':
         cardtype = '비자카드'
-        if cardnum[1:] == '04825':            cardbank = '비씨카드'
-        elif cardnum[1:] == '38676':            cardbank = '신한카드'
-        elif cardnum[1:] == '57973':             cardbank = '국민은행'
+        if cardnum[1:] == '04825': cardbank = '비씨카드'
+        elif cardnum[1:] == '38676': cardbank = '신한카드'
+        elif cardnum[1:] == '57973': cardbank = '국민은행'
         else:  cardbank = '은행정보는 등록되지 않았습니다.'
     elif cardnum[0] == '5':
         cardtype = '마스타카드'
-        if cardnum[1:] == '15594':            cardbank = '신한카드'
-        elif cardnum[1:] == '24353':            cardbank = '외환카드'
-        elif cardnum[1:] == '40926':             cardbank = '국민은행'
+        if cardnum[1:] == '15594': cardbank = '신한카드'
+        elif cardnum[1:] == '24353': cardbank = '외환카드'
+        elif cardnum[1:] == '40926': cardbank = '국민은행'
     else:  cardbank = '은행정보는 등록되지 않았습니다.'
 else:
     cardtype = '올바른 카드번호가 아닙니다.'
 
 result = f'''
 카드 종류 및 은행: {cardtype} - {cardbank}
-
 '''
-
 print(result)
-
 
 
 #32 주민등록번호
