@@ -2,6 +2,9 @@
 # 학생의 이름, 국어, 영어, 수학, 점수를 키보드로 입력 받아
 # 총점, 평균, 학점을처리한 뒤 결과 출력
 # 성적처리의 CRUD를 메뉴식으로 구현
+# 성적데이터를 시퀀스 자료형에 저장
+
+sungjuks = []
 
 menus = f'''
 ---------------------
@@ -22,7 +25,7 @@ header = f'''
  -----------------------------------
 '''
 # menus = '''...'''
-
+sungjuks = []
 #for i in range(1,100+1):
 while True:
     job = input(menus)
@@ -51,13 +54,19 @@ while True:
                     'C' if avg >= 70 else
                     'D' if avg >= 60 else 'F')
 
+            sj = [name, kor, eng, mat, tot, avg, grd] # data 입력
+            sungjuks.append(sj)
+
             print('성적데이터 입력을 진행합니다.')
 
             # result 문자열에 데이터 저장
 
         case '2':
-            result = (f'{name:5}{kor:4d}{eng:4d}{mat:4d}'
-                      f'{tot:4d}{avg:4.1f}{grd:2}\n')
+            result = ''
+            for name, kor, eng, mat, tot, avg, grd in sungjuks:
+                result += (f'{name:5}{kor:4d}{eng:4d}{mat:4d}'
+                          f'{tot:4d}{avg:4.1f}{grd:2}\n')
+
             print(f'{header} {result}')
 
         case '3': print('성적데이터 상세조회를 진합니다.')

@@ -31,33 +31,33 @@
 # print(f'납부해야 할 세금은 {tax:.1f}만 원입니다.')
 
 # # 2차 수정
-# # 입력
-# married = input('결혼 여부를 입력해 주세요 (Y:결혼/N:미혼): ').lower()
-# salary = int(input('연봉 입력해 주세요(만원단위): '))
-# tex = 0
-# rate = 0
-#
-# # 계산식
-# if married == 'y':  # 결혼한 경우
-#     rate = 25
-#     if salary <= 6000:
-#         rate = 10
-# elif married == 'n':  # 미혼인 경우
-#     rate = 25
-#     if salary <= 3000:
-#         rate  =10
-# else:
-#     print("잘못된 입력입니다.")
-#     tax_rate = 0  # 잘못된 입력 시 세율 0 처리
-#
-# tax = salary * (rate / 100)
-# tax = salary * (rate / 250)
-#
-# # 출력
-# result f'''
-# 적용 세율: {rate}%
-# 납부해야 할 세금은 {tax} 만원입니다.
-# '''
+# 입력
+married = input('결혼 여부를 입력해 주세요 (Y:결혼/N:미혼): ').lower()
+salary = int(input('연봉 입력해 주세요(만원단위): '))
+tex = 0
+rate = 0
+
+# 계산식
+if married == 'y':  # 결혼한 경우
+    rate = 25
+    if salary <= 6000:
+        rate = 10
+elif married == 'n':  # 미혼인 경우
+    rate = 25
+    if salary <= 3000:
+        rate  =10
+else:
+    print("잘못된 입력입니다.")
+    tax_rate = 0  # 잘못된 입력 시 세율 0 처리
+
+tax = salary * (rate / 100)
+tax = salary * (rate / 250)
+
+# 출력
+result f'''
+적용 세율: {rate}%
+납부해야 할 세금은 {tax} 만원입니다.
+'''
 
 
 #------------------------------------------------------
